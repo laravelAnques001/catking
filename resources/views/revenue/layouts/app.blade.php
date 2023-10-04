@@ -111,14 +111,15 @@
                                     <div class="tab-content">
                                         <div class="tab-pane active" id="colored-justified-tab1">
                                             <ul class="nav nav-pills nav-justified">
-                                                <li class="active">
-                                                    <a href="/revenue">Revenue</a>
+                                                <li
+                                                    class="{{ Route::currentRouteName() == 'ceo-revenue' ? 'active' : '' }}">
+                                                    <a href="{{ route('ceo-revenue') }}">Revenue</a>
                                                 </li>
-                                                <li>
-                                                    <a href="/sales">Sales</a>
+                                                <li class="{{ Route::currentRouteName() == 'sales' ? 'active' : '' }}">
+                                                    <a href="{{ route('sales') }}">Sales</a>
                                                 </li>
-                                                <li>
-                                                    <a href="#">CAT</a>
+                                                <li class="{{ Route::currentRouteName() == 'cat' ? 'active' : '' }}">
+                                                    <a href="{{ route('cat') }}">CAT</a>
                                                 </li>
                                                 <li>
                                                     <a href="#">Non-CAT</a>

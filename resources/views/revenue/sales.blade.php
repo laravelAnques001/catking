@@ -2,9 +2,6 @@
 @push('head_script')
     <script type="text/javascript" src="{{ asset('assets/js/plugins/visualization/echarts/echarts.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/charts/echarts/timeline_option.js') }}"></script>
-    {{--  <script type="text/javascript" src="{{ asset('assets/js/charts/echarts/pies_donuts.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/charts/echarts/columns_waterfalls.js') }}"></script>  --}}
-
     <script>
         $(function() {
             require.config({

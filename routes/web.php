@@ -18,19 +18,25 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/revenue', function () {
+Route::get('/ceo-revenue', function () {
     return view('revenue.dashboard');
-});
+})->name('ceo-revenue');
+
 Route::get('/sales', function () {
     return view('revenue.sales');
-});
+})->name('sales');
+
+Route::get('/cat', function () {
+    return view('revenue.cat');
+})->name('cat');
+
 Route::get('/dashboard_model', function () {
     return view('revenue.dashboard_model');
 });
 
-// Route::get('/revenue', function () {
-//     return view('welcome');
-// });
+Route::get('/revenue', function () {
+    return view('revenue.dashboard');
+});
 
 Auth::routes();
 
