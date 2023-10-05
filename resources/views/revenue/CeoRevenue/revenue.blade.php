@@ -260,13 +260,13 @@
     <!-- Application status -->
     <div class="row">
         <div class="col-lg-6">
-            <div class="panel panel-flat">
-                <div class="panel-heading">
+            <div class="panel panel-flat border-radius-15 mt-20">
+                <div class="panel-heading border-radius-15">
                     <h6 class="panel-title">Enrollments</h6>
                     <div class="heading-elements">
                         <div class="heading-text">
-                            <span class="status-mark border-info position-left"></span>This Year
-                            <span class="status-mark border-success position-left ml-5"></span>Last Year
+                            <span class="status-mark border-primary position-left"></span>This Year
+                            <span class="status-mark border-primary-300 position-left ml-5"></span>Last Year
                         </div>
                     </div>
                 </div>
@@ -276,12 +276,12 @@
                         <li>
                             <label>Total No Of Enrollment <span>80%</span></label>
                             <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-info" style="width: 80%">
+                                <div class="progress-bar progress-bar-primary" style="width: 80%">
                                     <span class="sr-only">80% Complete</span>
                                 </div>
                             </div>
                             <div class="progress progress-xxs mt-5">
-                                <div class="progress-bar progress-bar-success" style="width: 70%" data-tor-tooltip="25%"
+                                <div class="progress-bar progress-bar-primary" style="width: 70%" data-tor-tooltip="25%"
                                     aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" title="70%">
                                     <span class="sr-only">70% Complete</span>
                                 </div>
@@ -309,8 +309,8 @@
         </div>
 
         <div class="col-lg-6">
-            <div class="panel panel-flat">
-                <div class="panel-heading">
+            <div class="panel panel-flat border-radius-15 mt-20">
+                <div class="panel-heading border-radius-15">
                     <h6 class="panel-title">Revenue</h6>
 
                     <div class="heading-elements">
@@ -359,8 +359,8 @@
 
         <div class="col-md-6">
             <!-- Nested pie charts -->
-            <div class="panel panel-flat">
-                <div class="panel-heading">
+            <div class="panel panel-flat border-radius-15 mt-20">
+                <div class="panel-heading border-radius-15">
                     <h5 class="panel-title">Total No Of Enrollment </h5>
                 </div>
                 <div class="row">
@@ -425,8 +425,8 @@
 
         <div class="col-md-6">
             <!-- Basic column chart -->
-            <div class="panel panel-flat">
-                <div class="panel-heading">
+            <div class="panel panel-flat border-radius-15 mt-20">
+                <div class="panel-heading border-radius-15">
                     <h5 class="panel-title">Total Revenue</h5>
                     <div class="heading-elements">
                         <div class="heading-text">
@@ -449,14 +449,16 @@
 
         <div class="col-md-6">
             <!-- Basic column chart -->
-            <div class="panel panel-flat">
-                <div class="panel-heading">
+            <div class="panel panel-flat border-radius-15 mt-20">
+                <div class="panel-heading border-radius-15">
                     <h5 class="panel-title">Failed Order</h5>
 
                     <div class="heading-elements">
                         <div class="heading-text">
-                            <a href="/dashboard_model" class="btn btn-default btn-sm ajaxviewmodel"><i
-                                    class="icon-info22 position-right"></i></a>
+                            <a href="{{ route('ceo-revenue.revenue-model') }}" class="ajaxviewmodel">
+                                {{--  <i class="icon-info22 position-right"></i>  --}}
+                                <img src="{{ asset('assets/images/icon/info.png') }}">
+                            </a>
                         </div>
                     </div>
                 </div>

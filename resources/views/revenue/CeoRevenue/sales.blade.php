@@ -238,12 +238,13 @@
 @section('content')
     <div class="row">
         <div class="col-md-4">
-            <div class="panel">
-                <div class="panel-heading bg-primary">
+            <div class="panel border-radius-15 mt-10 mb-10">
+                <div class="panel-heading bg-primary border-radius-top-15">
                     <h5 class="panel-title">Total Calls</h5>
                     <div class="heading-elements">
                         <div class="heading-text h5">
-                            826
+                            826 <i class="icon-info22 position-right"
+                                title="Detail Of Total Calls, Including How Many Were Answered And How Many Went Unanswered"></i>
                         </div>
                     </div>
                 </div>
@@ -263,11 +264,13 @@
         </div>
 
         <div class="col-md-4">
-            <div class="panel ">
-                <div class="panel-heading bg-primary">
+            <div class="panel border-radius-15 mt-10 mb-10">
+                <div class="panel-heading bg-primary border-radius-top-15">
                     <h5 class="panel-title">Leads</h5>
                     <div class="heading-elements">
                         <div class="heading-text">
+                            <i class="icon-info22 position-right"
+                                title="Detail Of Total Calls, Including How Many Were Answered And How Many Went Unanswered"></i>
                         </div>
                     </div>
                 </div>
@@ -289,11 +292,13 @@
         </div>
 
         <div class="col-md-4">
-            <div class="panel">
-                <div class="panel-heading bg-primary">
+            <div class="panel border-radius-15 mt-10 mb-10">
+                <div class="panel-heading bg-primary border-radius-top-15">
                     <h5 class="panel-title">Converted Leads</h5>
                     <div class="heading-elements">
                         <div class="heading-text h5">
+                            <i class="icon-info22 position-right"
+                                title="Information About Converted Leads From Agent-Based And Direct Sources"></i>
                         </div>
                     </div>
                 </div>
@@ -314,138 +319,267 @@
     </div>
 
     <div class="row ">
-        <h5 class="ml-15">Inbound Calls</h5>
+        <h5 class="ml-15">Inbound Calls
+            {{--  <i class="icon-phone-incoming ml-5"></i>  --}}
+            <img src="{{ asset('assets/images/icon/callin.png') }}" alt="call" class="ml-5">
+        </h5>
         <div class="col-md-1">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5 ">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="Total Number of Incoming Calls">
+                </span>
                 <h5>Total Calls</h5>
+                {{--  <h5><i class="icon-phone2"></i></h5>  --}}
+                <h5><img src="{{ asset('assets/images/icon/call.png') }}" alt="call"></h5>
                 <h5>120</h5>
             </div>
         </div>
         <div class="col-md-2">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="Total Number of Incoming Calls That were connected">
+                </span>
                 <h5>Connected Calls</h5>
+                {{--  <h5><i class="icon-phone-wave"></i></h5>  --}}
+                <h5><img src="{{ asset('assets/images/icon/connect.png') }}" alt="connect"></h5>
                 <h5>100</h5>
             </div>
         </div>
         <div class="col-md-2">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="Total Number of Incoming Calls That were Missed">
+                </span>
                 <h5>Missed Calls</h5>
+                {{--  <h5><i class="icon-phone-minus2"></i></h5>  --}}
+                <h5><img src="{{ asset('assets/images/icon/disconnect.png') }}" alt="disconnect"></h5>
                 <h5>20</h5>
             </div>
         </div>
         <div class="col-md-1">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="Total number of calls that are in waiting in queue to connect">
+                </span>
                 <h5>Calls Queue</h5>
+                {{--  <h5><i class="icon-phone-plus2"></i></h5>  --}}
+                <h5><img src="{{ asset('assets/images/icon/callQueue.png') }}" alt="callQueue"></h5>
                 <h5>8</h5>
             </div>
         </div>
         <div class="col-md-2">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="Overall Number of Hours All Agents Talked Throughout the Day on inbound calls.">
+                </span>
                 <h5>Duration Hrs</h5>
+                {{--  <h5><i class="icon-phone-hang-up"></i></h5>  --}}
+                <h5><img src="{{ asset('assets/images/icon/durationHRS.png') }}" alt="added"></h5>
                 <h5>10.2</h5>
             </div>
         </div>
         <div class="col-md-2">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="Avereage Time in minutes that all agents spent on the inbound calls.">
+                </span>
                 <h5>Avg Duration In Min</h5>
+                <h5><img src="{{ asset('assets/images/icon/duration.png') }}" alt="added"></h5>
                 <h5>1.35</h5>
             </div>
         </div>
         <div class="col-md-2">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="Number Of Agents available for inbound calls.">
+                </span>
                 <h5>Number Of Agents</h5>
+                <h5><img src="{{ asset('assets/images/icon/agent.png') }}" alt="added"></h5>
                 <h5>16</h5>
             </div>
         </div>
     </div>
 
     <div class="row ">
-        <h5 class="ml-15">Outbound Calls</h5>
+        <h5 class="ml-15">Outbound Calls
+            {{--  <i class="icon-phone-incoming ml-5"></i>  --}}
+            <img src="{{ asset('assets/images/icon/callOut.png') }}" alt="call" class="ml-5">
+        </h5>
         <div class="col-md-1">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="Total Number of Outgoing Calls">
+                </span>
                 <h5>Total Calls</h5>
-                <h5>120</h5>
+                {{--  <h5><i class="icon-phone2"></i></h5>  --}}
+                <h5><img src="{{ asset('assets/images/icon/call.png') }}" alt="call"></h5>
+                <h5>626</h5>
             </div>
         </div>
         <div class="col-md-2">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="Total Number of Outgoing Calls That were connected">
+                </span>
                 <h5>Connected Calls</h5>
-                <h5>100</h5>
+                {{--  <h5><i class="icon-phone-wave"></i></h5>  --}}
+                <h5><img src="{{ asset('assets/images/icon/connect.png') }}" alt="connect"></h5>
+                <h5>576</h5>
             </div>
         </div>
         <div class="col-md-2">
-            <div class="panel pt-5 pb-5 text-center">
-                <h5>Missed Calls</h5>
-                <h5>20</h5>
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="Total Number of Outgoing Calls That were Unanswered">
+                </span>
+                <h5>Unanswered Calls</h5>
+                {{--  <h5><i class="icon-phone-minus2"></i></h5>  --}}
+                <h5><img src="{{ asset('assets/images/icon/disconnect.png') }}" alt="disconnect"></h5>
+                <h5>50</h5>
             </div>
         </div>
         <div class="col-md-1">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="Total number of calls that are in waiting in queue to connect">
+                </span>
                 <h5>Calls Queue</h5>
+                {{--  <h5><i class="icon-phone-plus2"></i></h5>  --}}
+                <h5><img src="{{ asset('assets/images/icon/callQueue.png') }}" alt="callQueue"></h5>
                 <h5>8</h5>
             </div>
         </div>
         <div class="col-md-2">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="Overall Number of Hours All Agents Talked Throughout the Day on outbound calls">
+                </span>
                 <h5>Duration Hrs</h5>
-                <h5>10.2</h5>
+                {{--  <h5><i class="icon-phone-hang-up"></i></h5>  --}}
+                <h5><img src="{{ asset('assets/images/icon/durationHRS.png') }}" alt="added"></h5>
+                <h5>20.4</h5>
             </div>
         </div>
         <div class="col-md-2">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="Average Time in minutes that all agents spent on the Outbound calls.">
+                </span>
                 <h5>Avg Duration In Min</h5>
-                <h5>1.35</h5>
+                <h5><img src="{{ asset('assets/images/icon/duration.png') }}" alt="added"></h5>
+                <h5>1.47</h5>
             </div>
         </div>
         <div class="col-md-2">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="Number Of Agents available for Outbound calls.">
+                </span>
                 <h5>Number Of Agents</h5>
+                <h5><img src="{{ asset('assets/images/icon/agent.png') }}" alt="added"></h5>
                 <h5>16</h5>
             </div>
         </div>
     </div>
 
     <div class="row">
-        <h5 class="ml-15">Progressive Calls</h5>
+        <h5 class="ml-15">Progressive Calls
+            {{--  <i class="icon-phone-incoming ml-5"></i>  --}}
+            <img src="{{ asset('assets/images/icon/progressiveCall.png') }}" alt="call" class="ml-5">
+        </h5>
         <div class="col-md-1">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="Total Number of Progressive Calls.">
+                </span>
                 <h5>Total Calls</h5>
-                <h5>120</h5>
+                {{--  <h5><i class="icon-phone2"></i></h5>  --}}
+                <h5><img src="{{ asset('assets/images/icon/call.png') }}" alt="call"></h5>
+                <h5>80</h5>
             </div>
         </div>
         <div class="col-md-2">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="">
+                </span>
                 <h5>Connected Calls</h5>
-                <h5>100</h5>
+                {{--  <h5><i class="icon-phone-wave"></i></h5>  --}}
+                <h5><img src="{{ asset('assets/images/icon/connect.png') }}" alt="connect"></h5>
+                <h5>60</h5>
             </div>
         </div>
         <div class="col-md-2">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="">
+                </span>
                 <h5>Missed Calls</h5>
-                <h5>20</h5>
+                {{--  <h5><i class="icon-phone-minus2"></i></h5>  --}}
+                <h5><img src="{{ asset('assets/images/icon/disconnect.png') }}" alt="disconnect"></h5>
+                <h5>12</h5>
             </div>
         </div>
         <div class="col-md-1">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="">
+                </span>
                 <h5>Calls Queue</h5>
+                {{--  <h5><i class="icon-phone-plus2"></i></h5>  --}}
+                <h5><img src="{{ asset('assets/images/icon/callQueue.png') }}" alt="callQueue"></h5>
                 <h5>8</h5>
             </div>
         </div>
         <div class="col-md-2">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="">
+                </span>
                 <h5>Duration Hrs</h5>
-                <h5>10.2</h5>
+                {{--  <h5><i class="icon-phone-hang-up"></i></h5>  --}}
+                <h5><img src="{{ asset('assets/images/icon/durationHRS.png') }}" alt="added"></h5>
+                <h5>5.8</h5>
             </div>
         </div>
         <div class="col-md-2">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="">
+                </span>
                 <h5>Avg Duration In Min</h5>
-                <h5>1.35</h5>
+                <h5><img src="{{ asset('assets/images/icon/duration.png') }}" alt="added"></h5>
+                <h5>1.12</h5>
             </div>
         </div>
         <div class="col-md-2">
-            <div class="panel pt-5 pb-5 text-center">
+            <div class="panel pt-5 pb-5 text-center mt-10 mb-10 border-radius-15">
+                <span class="d-flex justify-content-end pr-5">
+                    <img src="{{ asset('assets/images/icon/info.png') }}" alt="call"
+                        title="Number Of Agents available for Progressive calls">
+                </span>
                 <h5>Number Of Agents</h5>
+                <h5><img src="{{ asset('assets/images/icon/agent.png') }}" alt="added"></h5>
                 <h5>16</h5>
             </div>
         </div>
@@ -454,8 +588,8 @@
     <div class="row">
         <div class="col-md-8">
             <!-- Basic column chart -->
-            <div class="panel panel-flat">
-                <div class="panel-heading">
+            <div class="panel panel-flat mt-10 mb-10 border-radius-15">
+                <div class="panel-heading border-radius-15">
                     <h5 class="panel-title">Conversion Ratio</h5>
                     <div class="heading-elements">
                         <div class="heading-text">
@@ -474,8 +608,8 @@
         </div>
         <div class="col-md-4">
             <!-- Basic column chart -->
-            <div class="panel panel-flat">
-                <div class="panel-heading">
+            <div class="panel panel-flat mt-10 mb-10 border-radius-15">
+                <div class="panel-heading border-radius-15">
                     <h5 class="panel-title">Call Hour Flow</h5>
                     <div class="heading-elements">
                         <div class="heading-text">576</div>
@@ -493,8 +627,8 @@
     <div class="row">
         <div class="col-md-8">
             <!-- Bordered panel body table -->
-            <div class="panel panel-flat">
-                <div class="panel-heading">
+            <div class="panel panel-flat mt-10 mb-10 border-radius-15">
+                <div class="panel-heading border-radius-15">
                     <h5 class="panel-title">Per Agent Conversion</h5>
                 </div>
 
@@ -652,8 +786,8 @@
 
         <div class="col-md-4">
             <!-- Basic column chart -->
-            <div class="panel panel-flat">
-                <div class="panel-heading">
+            <div class="panel panel-flat mt-10 mb-10 border-radius-15">
+                <div class="panel-heading border-radius-15">
                     <h5 class="panel-title">Call Timing</h5>
                 </div>
                 <div class="table-responsive">

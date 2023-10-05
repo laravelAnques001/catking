@@ -1,20 +1,83 @@
-/* .tooltip{
-    position:relative;
-    float:right;
+  .d-flex{
+    display: flex;
   }
-  .tooltip > .tooltip-inner {background-color: #eebf3f; padding:5px 15px; color:rgb(135, 186, 240); font-weight:bold; font-size:13px;}
-  .popOver + .tooltip > .tooltip-arrow {	border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #eebf3f;}
+  .justify-content-end{
+    justify-content: end;
+  }
+.bg-blue-theme{
+    background-color: #3490EB;
+}
+.border-blue-theme{
+   border-color: #3490EB;
+}
+.bg-blue-theme-300{
+    background-color: #D1E8FE;
+}
+.border-blue-theme-300{
+    border-color: #D1E8FE;
+}
 
-  section{
-    margin:100px auto;
-    height:1000px;
-  }
-  .progress{
-    border-radius:0;
-    overflow:visible;
-  }
-  .progress-bar{
-     background:rgb(100, 161, 207);
-    -webkit-transition: width 1.5s ease-in-out;
-    transition: width 1.5s ease-in-out;
-  } */
+.bg-cornBlue-theme{
+    background-color: #6186FF;
+}
+.border-cornBlue-theme{
+   border-color: #6186FF;
+}
+.bg-cornBlue-theme-300{
+    background-color: #BFCEFF;
+}
+.border-cornBlue-theme-300{
+    border-color: #BFCEFF;
+}
+.text-transform-unset
+{
+    text-transform: unset !important;
+}
+.nav-pills > li.active > a
+{
+    color: #fff;
+    background-color: #0468FA;
+    background-image: linear-gradient(#0468FA, #009BFF);
+    border-radius: 15px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.btn-back-color{
+    background-color: #F2F4F9;
+}
+.nav-pills > li + li > a {
+    margin-top: 0;
+    margin-left: 6px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 0;
+    margin-left: 6px;
+    border-radius: 15px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.btn-back-revenue{
+    background-color:#E5F9F2;
+}
+
+.active-revenue{
+    background-image: linear-gradient(#28C590, #28C590) !important;
+}
+
+.border-radius-15{
+    border-radius: 15px;
+}
+
+.border-radius-top-15{
+    border-radius: 15px 15px 0 0 !important;
+}

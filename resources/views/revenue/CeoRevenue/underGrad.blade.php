@@ -39,16 +39,24 @@
 
                         // Add tooltip
                         tooltip: {
-                            trigger: 'axis'
+                            trigger: 'axis',
+                            axisPointer: {
+                                type: 'shadow'
+                            },
                         },
 
                         // Enable drag recalculate
                         calculable: true,
 
+
                         // Horizontal axis
                         xAxis: [{
                             type: 'category',
-                            data: ['CAT', 'Non-CAT', 'StudyAbroad', 'UnderGrad', 'GDPI', 'Mocks']
+                            data: ['IPMAT Turbo', 'IPMAT Intensive', 'IPMAT Mocks',
+                                'IPMAT Mocks', 'NPAT Turbo',
+                                'NPAT Advance', 'CUET Turbo',
+                                'CUET Advance'
+                            ]
                         }],
 
                         // Vertical axis
@@ -58,11 +66,12 @@
 
                         // Add series
                         series: [{
-                                name: 'Today Day',
+                                name: 'Today',
                                 type: 'bar',
-                                data: [7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0],
+                                data: [500, 400, 450, 1000, 500, 300, 100, 310],
                                 itemStyle: {
                                     normal: {
+                                        color: '#D1E8FE',
                                         label: {
                                             show: true,
                                             textStyle: {
@@ -73,11 +82,12 @@
                                 }
                             },
                             {
-                                name: 'Previous Day',
+                                name: 'Last Day',
                                 type: 'bar',
-                                data: [9.0, 26.4, 58.7, 70.7, 175.6, 182.2, 48.7, 18.8],
+                                data: [470, 750, 300, 1250, 400, 200, 250, 210],
                                 itemStyle: {
                                     normal: {
+                                        color: '#3490EB',
                                         label: {
                                             show: true,
                                             textStyle: {
@@ -111,7 +121,11 @@
                         // Horizontal axis
                         xAxis: [{
                             type: 'category',
-                            data: ['CAT', 'Non-CAT', 'StudyAbroad', 'UnderGrad', 'GDPI', 'Mocks']
+                            data: ['IPMAT Turbo', 'IPMAT Intensive', 'IPMAT Mocks',
+                                'IPMAT Mocks', 'NPAT Turbo',
+                                'NPAT Advance', 'CUET Turbo',
+                                'CUET Advance'
+                            ]
                         }],
 
                         // Vertical axis
@@ -121,11 +135,12 @@
 
                         // Add series
                         series: [{
-                                name: 'Today Day',
+                                name: 'Today',
                                 type: 'bar',
-                                data: [7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0],
+                                data: [7, 5, 4, 2, 3, 6, 2, 4],
                                 itemStyle: {
                                     normal: {
+                                        color: '#6186FF',
                                         label: {
                                             show: true,
                                             textStyle: {
@@ -136,11 +151,12 @@
                                 }
                             },
                             {
-                                name: 'Previous Day',
+                                name: 'Last Day',
                                 type: 'bar',
-                                data: [9.0, 26.4, 58.7, 70.7, 175.6, 182.2, 48.7, 18.8],
+                                data: [8, 6, 3, 3, 4, 5, 1, 2],
                                 itemStyle: {
                                     normal: {
+                                        color: '#BFCEFF',
                                         label: {
                                             show: true,
                                             textStyle: {
@@ -175,45 +191,42 @@
     </script>
 @endpush
 @section('content')
-    {{--  <div class="row">
-        <div class="col-md-12">  --}}
-            <!-- Basic column chart -->
-            <div class="panel panel-flat">
-                <div class="panel-heading">
-                    <h5 class="panel-title">Total Revenue</h5>
-                    <div class="heading-elements">
-                        <div class="heading-text">
-                            <span class="status-mark border-info position-left"></span>Today
-                            <span class="status-mark border-success position-left ml-5"></span>Last Day
-                        </div>
-                    </div>
-                </div>
-                <div class="panel-body">
-                    <div class="chart-container">
-                        <div class="chart has-fixed-height" id="total_revenue"></div>
-                    </div>
+    <!-- Basic column chart -->
+    <div class="panel panel-flat mt-10 mb-10 border-radius-15">
+        <div class="panel-heading border-radius-15">
+            <h5 class="panel-title">Total Revenue</h5>
+            <div class="heading-elements">
+                <div class="heading-text">
+                    <span class="status-mark border-blue-theme bg-blue-theme position-left"></span>Today
+                    <span class="status-mark border-blue-theme-300 bg-blue-theme-300 position-left ml-5"></span>Last
+                    Day
                 </div>
             </div>
-            <!-- /basic column chart -->
-
-            <!-- Basic column chart -->
-            <div class="panel panel-flat">
-                <div class="panel-heading">
-                    <h5 class="panel-title">No Of Enrollment</h5>
-                    <div class="heading-elements">
-                        <div class="heading-text">
-                            <span class="status-mark border-info position-left"></span>Today
-                            <span class="status-mark border-success position-left ml-5"></span>Last Day
-                        </div>
-                    </div>
-                </div>
-                <div class="panel-body">
-                    <div class="chart-container">
-                        <div class="chart has-fixed-height" id="no_of_enrollment"></div>
-                    </div>
+        </div>
+        <div class="panel-body">
+            <div class="chart-container">
+                <div class="chart has-fixed-height" id="total_revenue"></div>
+            </div>
+        </div>
+    </div>
+    <!-- /basic column chart -->
+    <!-- Basic column chart -->
+    <div class="panel panel-flat mt-10 mb-10 border-radius-15">
+        <div class="panel-heading border-radius-15">
+            <h5 class="panel-title">No Of Enrollment</h5>
+            <div class="heading-elements">
+                <div class="heading-text">
+                    <span class="status-mark border-cornBlue-theme bg-cornBlue-theme position-left"></span>Today
+                    <span class="status-mark border-cornBlue-theme-300 bg-cornBlue-theme-300 position-left ml-5"></span>Last
+                    Day
                 </div>
             </div>
-            <!-- /basic column chart -->
-        {{--  </div>
-    </div>  --}}
+        </div>
+        <div class="panel-body">
+            <div class="chart-container">
+                <div class="chart has-fixed-height" id="no_of_enrollment"></div>
+            </div>
+        </div>
+    </div>
+    <!-- /basic column chart -->
 @endsection
